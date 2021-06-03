@@ -23,5 +23,6 @@ jobs:
         shell: cmd
         run: |
           curl https://github.com/microsoft/winget-create/releases/latest/download/wingetcreate.exe -L -O wingetcreate.exe
-          wingetcreate.exe update -i ${{ secrets.PACKAGE_ID }} -u ${{ github.event.inputs.release-url }} -v ${{ github.event.inputs.version }}
+          wingetcreate.exe update -i ${{ secrets.PACKAGE_ID }} -u ${{ github.event.inputs.release-url }} -v ${{ github.event.inputs.version }} -o osu.yaml
+          cat osu.yaml
 # -t ${{ secrets.GH_TOKEN }}
