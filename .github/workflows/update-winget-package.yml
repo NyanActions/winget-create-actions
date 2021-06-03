@@ -22,4 +22,4 @@ jobs:
       - name: Download & Run wingetcreate update
         run: |
           curl https://github.com/microsoft/winget-create/releases/latest/download/wingetcreate.exe -L -O
-          wingetcreate.exe update -i ${{ secrets.PACKAGE_ID }} -u ${{ github.event.inputs.release-url }} -v ${{ github.event.inputs.version }} -t ${{ secrets.GH_TOKEN }}
+          .\wingetcreate.exe update -i ${{ secrets.PACKAGE_ID }} -u ${{ github.event.inputs.release-url }} -v ${{ github.event.inputs.version }} -t ${{ secrets.GH_TOKEN }}
